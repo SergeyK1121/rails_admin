@@ -41,6 +41,7 @@ import flatpickr from "flatpickr";
       }
 
       switch (field_type) {
+        case "test_group":
         case "boolean":
           control &&
             control
@@ -234,12 +235,10 @@ import flatpickr from "flatpickr";
           );
         case "_null":
           return $('<option value="_null"></option>').text(I18n.t("is_blank"));
-
         case "true":
           return $('<option value="true"></option>').text(I18n.t("true"));
         case "false":
           return $('<option value="false"></option>').text(I18n.t("false"));
-
         case "today":
           return $('<option value="today"></option>').text(I18n.t("today"));
         case "yesterday":
